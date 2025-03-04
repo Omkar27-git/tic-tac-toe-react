@@ -1,0 +1,187 @@
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.title {
+    margin-top: 50px;
+    color: white;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title span {
+    color: #26ffcb;
+    padding-left: 20px;
+}
+
+.reset {
+    width: 250px;
+    height: 100px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background: #1f3540;
+    font-size: 26px;
+    color: #26ffcb;
+    margin-top: 350px;
+    margin-bottom: 50px;
+}
+
+.reset:hover {
+    background: #26ffcb;
+    color: #1f3540;
+    transform: scale(1.1);
+}
+
+/* Grid Layout Fix */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    width: 320px;
+    height: 320px;
+    margin-left:780px;
+    
+}
+
+/* Box Styling Fix */
+.boxes {
+    width: 200px;
+    height: 200px;
+    background-color: #1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border: 2px solid #000;
+    cursor: pointer;
+    box-shadow: 0 0 5px white;
+}
+
+/* Fix Image Sizing Inside Boxes */
+.boxes img {
+    max-width: 80%;
+    max-height: 80%;
+    margin: 0; 
+    transform: scale(0);
+    animation: pop 0.3s forwards ease-in-out;
+}
+
+.title img {
+    padding: 20px 20px;
+    height: 50px;
+    margin-top: 14px;
+}
+
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.title img {
+    padding: 20px 20px;
+    height: 50px;
+    margin-top: 14px;
+}
+
+@media (min-width: 360px) and (max-width: 767px){
+    .container {
+        padding: 13px;
+        margin-top: 7rem;
+    }
+
+    .title {
+        font-size: 25px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .title img{
+        height: 30px;
+        margin-bottom: 12px;
+    }
+
+    .title span {
+        padding-left: 13px;
+    }
+
+    .reset {
+        width: 180px;
+        height: 50px;
+        font-size: 18px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    /* Adjust board to fit screen */
+    .board {
+        width: 90vw;
+        max-width: 280px;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        margin: auto;
+        margin-top: 2rem;
+    }
+
+    /* Adjust boxes for small screens */
+    .boxes {
+        width: 80px;
+        height: 80px;
+        font-size: 1.2rem;
+    }
+
+    /* Ensure images fit inside the boxes */
+    .boxes img {
+        max-width: 60%;
+        max-height: 60%;
+    }
+}
+
+
+/* 📟 Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1440px) {
+    .title {
+        font-size: 48px;
+        margin-top: 30px;
+    }
+
+    .reset {
+        width: 220px;
+        height: 80px;
+        font-size: 22px;
+        margin-top: 40px;
+    }
+
+    .board {
+        width: 400px;
+        height: 400px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin: auto;
+    }
+
+    .boxes {
+        width: 120px;
+        height: 120px;
+        font-size: 1.8rem;
+    }
+
+    .boxes img {
+        max-width: 70%;
+        max-height: 70%;
+    }
+}
